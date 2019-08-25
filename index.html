@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>Rainy Day</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>
+	</head>
+	<body>
+    <script src="js/three.js"></script>
+    <script>
+			let scene,camera, renderer, cloudParticles = [], flash, rain, rainGeo, rainCount = 15000;
+			function init() {
+				scene = new THREE.Scene();
+				scene.background = new THREE.Color(0xdddddd);
+				camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000);
+				camera.rotation.y = 45/180*Math.PI;
+				camera.position.x = 800;
+				camera.position.y = 100;
+				camera.position.z = 1000;
+				renderer = new THREE.WebGLRenderer({antialias:true});
+				renderer.setSize(window.innerWidth,window.innerHeight);
+				document.body.appendChild(renderer.domElement);
+			}
+
+		</script>
+	</body>
+</html>
