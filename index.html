@@ -51,18 +51,18 @@
 				scene.add(light4);
 
 				let loader = new THREE.OBJLoader();
-        loader.load('images/bugatti.obj', function(object){
-          car = object.scene.children[0];
-          car.scale.set(0.5,0.5,0.5);
-          scene.add(object.scene);
-          animate();
-        });
-			}
-			function animate() {
-        renderer.render(scene,camera);
-        requestAnimationFrame(animate);
-			}
-			init()
+				loader.load('images/bugatti.obj', function(object){
+				car = object.scene.children[0];
+				car.scale.set(0.5,0.5,0.5);
+				scene.add(object.scene);
+				animate();
+				});
+					}
+				function animate() {
+				renderer.render(scene,camera);
+				requestAnimationFrame(animate);
+				}
+				init()
 
 		</script>
 	</body>
